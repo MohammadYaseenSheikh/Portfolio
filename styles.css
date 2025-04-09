@@ -130,27 +130,35 @@ section {
 }
 
 /* Typing Effect */
-.typing-text, .typing-text-2 {
+.typing-container {
+    min-height: 200px;
+    margin-bottom: 2rem;
+}
+
+.typing-text {
     position: relative;
-    overflow: hidden;
-    white-space: nowrap;
+    white-space: pre-line;
     border-right: 2px solid var(--primary-color);
     animation: blink-caret 0.75s step-end infinite;
 }
 
-.typing-text {
-    width: 0;
-    animation: typing 2s steps(20, end) forwards, blink-caret 0.75s step-end infinite;
+.typing-text .line1 {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
-.typing-text-2 {
-    width: 0;
-    animation: typing 2s steps(20, end) 2s forwards, blink-caret 0.75s step-end infinite;
+.typing-text .line2 {
+    display: block;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+.typing-text .line3 {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--text-color);
 }
 
 @keyframes blink-caret {
@@ -249,25 +257,28 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
 .tech-scroll {
     display: flex;
     animation: scroll 30s linear infinite;
     white-space: nowrap;
+    gap: 1rem;
+    padding: 0 1rem;
 }
 
 .tech-scroll span {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    padding: 0.5rem 1.5rem;
     background: var(--bg-color);
     border-radius: 20px;
     font-size: 0.9rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-weight: 500;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
 }
 
 @keyframes scroll {
@@ -275,27 +286,28 @@ section {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 0.5rem));
     }
 }
 
-/* Make the scroll continuous by duplicating the content */
-.tech-scroll {
-    display: flex;
-    animation: scroll 30s linear infinite;
-    white-space: nowrap;
-}
-
-.tech-scroll::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, var(--card-bg));
+.tech-scroll-container::before,
+.tech-scroll-container::after {
+    content: "";
     position: absolute;
     top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.tech-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--card-bg), transparent);
+}
+
+.tech-scroll-container::after {
     right: 0;
-    pointer-events: none;
+    background: linear-gradient(to left, var(--card-bg), transparent);
 }
 
 /* Experience Section */

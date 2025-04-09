@@ -1,48 +1,53 @@
 // Typing Effect
 document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
     const typingText = document.querySelector('.typing-text');
-    const typingText2 = document.querySelector('.typing-text-2');
     const socialLinksContainer = document.querySelector('.social-links-container');
     
-    // Text to type
-    const text1 = "Software Engineer";
-    const text2 = "Hyderabad, India";
+    const lines = [
+        { text: 'MohammadYaseen Sheikh', class: 'line1' },
+        { text: 'Software Engineer', class: 'line2' },
+        { text: 'Hyderabad, India', class: 'line3' }
+    ];
     
-    // Function to type text
-    function typeText(element, text, speed = 100) {
-        let i = 0;
-        element.textContent = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            } else {
-                // If this is the second text, show social links after a delay
-                if (element === typingText2) {
+    let currentLine = 0;
+    let currentChar = 0;
+    
+    function type() {
+        if (currentLine < lines.length) {
+            // Create new line element if it doesn't exist
+            if (currentChar === 0) {
+                const lineElement = document.createElement('span');
+                lineElement.className = lines[currentLine].class;
+                typingText.appendChild(lineElement);
+            }
+            
+            const lineElement = typingText.lastElementChild;
+            lineElement.textContent = lines[currentLine].text.substring(0, currentChar + 1);
+            currentChar++;
+            
+            if (currentChar === lines[currentLine].text.length) {
+                currentLine++;
+                currentChar = 0;
+                if (currentLine === lines.length) {
+                    // Show social links after all typing is complete
                     setTimeout(() => {
                         socialLinksContainer.classList.remove('d-none');
                         setTimeout(() => {
                             socialLinksContainer.classList.add('show');
                         }, 100);
                     }, 500);
+                    return;
                 }
             }
+            
+            // Adjust typing speed based on the line
+            const speed = currentLine === 0 ? 100 : 70;
+            setTimeout(type, speed);
         }
-        
-        type();
     }
     
-    // Start typing animations
-    setTimeout(() => {
-        typeText(typingText, text1);
-    }, 500);
-    
-    setTimeout(() => {
-        typeText(typingText2, text2);
-    }, 2500);
+    // Start typing after a short delay
+    setTimeout(type, 500);
 });
 
 // Intersection Observer for section animations
