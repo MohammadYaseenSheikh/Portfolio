@@ -504,3 +504,20 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Contact Section Styles */
+.contact-input {
+  @apply bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all duration-300;
+}
+
+.social-link {
+  @apply p-4 rounded-lg bg-white/5 border border-white/10 text-white transition-all duration-300 hover:bg-white/10;
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl shadow-xl;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+}
