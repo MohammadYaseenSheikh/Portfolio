@@ -541,4 +541,78 @@ section {
 
 .btn-primary:hover i {
     transform: translateY(-2px);
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control {
+    background: var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: var(--bg-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 184, 148, 0.25);
+    color: var(--text-color);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-label {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form Button Animation */
+.contact-form .btn-primary {
+    margin-top: 1rem;
+    background: var(--secondary-color);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 0 15px rgba(0, 184, 148, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 184, 148, 0.5);
+}
+
+.contact-form .btn-primary:active {
+    transform: translateY(0);
+}
+
+.contact-form .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.contact-form .btn-primary:hover::before {
+    left: 100%;
 } 
