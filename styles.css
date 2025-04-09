@@ -185,42 +185,28 @@ section {
     transform: translateY(0);
 }
 
-.social-links a,
-.social-links i {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+.social-links a {
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.social-links a i {
+    opacity: 1;
     color: var(--secondary-color);
 }
 
-.social-links-container.show .social-links a:nth-child(1) {
+.social-links-container.show .social-links a {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.1s;
 }
 
-.social-links-container.show .social-links a:nth-child(2) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.2s;
-}
-
-.social-links-container.show .social-links a:nth-child(3) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.3s;
-}
-
-.social-links-container.show .social-links a:nth-child(4) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.4s;
-}
-
-.social-links a:hover,
-.social-links i:hover {
+.social-links a:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+.social-links a:hover i {
+    color: var(--primary-color);
 }
 
 /* Skills Section */
