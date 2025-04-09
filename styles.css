@@ -185,7 +185,8 @@ section {
     transform: translateY(0);
 }
 
-.social-links a {
+.social-links a,
+.social-links i {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
@@ -216,7 +217,8 @@ section {
     transition-delay: 0.4s;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links i:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
 }
@@ -461,8 +463,11 @@ section {
     margin-bottom: 1rem;
 }
 
-.contact-info i {
+.contact-info i,
+.contact-info .fa-brands,
+.contact-info .fa-solid {
     color: var(--secondary-color);
+    transition: var(--transition);
 }
 
 .contact-info a {
@@ -471,8 +476,19 @@ section {
     transition: var(--transition);
 }
 
-.contact-info a:hover {
+.contact-info a:hover,
+.contact-info a:hover i,
+.contact-info .fa-brands:hover,
+.contact-info .fa-solid:hover {
     color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Override any other color definitions */
+.navbar-brand i,
+.btn i,
+.contact-section i {
+    color: var(--secondary-color);
 }
 
 /* Responsive Design */
