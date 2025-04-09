@@ -23,6 +23,36 @@ body {
     line-height: 1.6;
     background-color: var(--light-bg);
     transition: var(--transition);
+    padding-top: 76px; /* Add padding for fixed navbar */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .navbar {
+    background-color: var(--dark-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Dark Mode Toggle */
