@@ -189,6 +189,7 @@ section {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    color: var(--secondary-color);
 }
 
 .social-links-container.show .social-links a:nth-child(1) {
@@ -213,6 +214,11 @@ section {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.4s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* Skills Section */
@@ -456,7 +462,7 @@ section {
 }
 
 .contact-info i {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .contact-info a {
