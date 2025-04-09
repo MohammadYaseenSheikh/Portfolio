@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# Yaseen Sheikh - Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my skills, experience, and projects as a Software Engineer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Clean and modern design
+- Fully responsive layout
+- Smooth animations and transitions
+- Dark mode support
+- Optimized for performance
+- Built with HTML, CSS, and JavaScript
+- Uses Bootstrap for responsive design
+- Font Awesome icons for visual elements
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Hero Section
+   - Name and title
+   - Location
+   - Social links
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. About Me
+   - Professional summary
+   - Key expertise
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Skills
+   - Frontend
+   - Backend
+   - Automation
+   - Databases
+   - Cloud
+   - DevOps & CI/CD
+   - Tools
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Experience
+   - Current role
+   - Key projects
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+5. Projects
+   - MATCHMaticAI
+   - COVID-19 Tracker
+   - BRICKStorm
+
+6. Education
+   - MCA
+   - BCA
+
+7. Certifications & Achievements
+   - Professional certifications
+   - Notable achievements
+
+8. Contact
+   - Email
+   - Phone
+   - Social links
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Bootstrap 5
+- Font Awesome
+- Intersection Observer API
+- CSS Variables
+- CSS Grid and Flexbox
+- CSS Animations and Transitions
+
+## Setup and Deployment
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MohammadYaseenSheikh/Portfolio.git
+   ```
+
+2. Open `index.html` in your browser or deploy to your preferred hosting service.
+
+3. For GitHub Pages deployment:
+   - Go to repository settings
+   - Navigate to Pages section
+   - Select main branch as source
+   - Save to deploy
+
+## Performance
+
+- Minimal dependencies
+- Optimized images
+- Efficient CSS and JavaScript
+- Smooth scrolling
+- Lazy loading animations
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+- Email: official.yaseen.sheikh@gmail.com
+- LinkedIn: [Mohammad Yaseen Sheikh](https://www.linkedin.com/in/mohammad-yaseen-sheikh-55484915a/)
+- GitHub: [MohammadYaseenSheikh](https://github.com/MohammadYaseenSheikh)

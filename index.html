@@ -1,13 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaseen Sheikh - Software Engineer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Yaseen Sheikh</h1>
+                    <h2 class="h3 mb-4">Software Engineer</h2>
+                    <p class="lead mb-4">Hyderabad, India</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohammad-yaseen-sheikh-55484915a/" target="_blank" class="me-3">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/MohammadYaseenSheikh" target="_blank" class="me-3">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="mailto:official.yaseen.sheikh@gmail.com" class="me-3">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </a>
+                        <a href="tel:7875869377" class="me-3">
+                            <i class="fas fa-phone fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">About Me</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead">
+                        I am a passionate Software Engineer specializing in backend development, microservices, and cloud computing. 
+                        With expertise in designing and maintaining scalable backend services, I focus on writing robust RESTful APIs 
+                        and optimizing database performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-5">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul class="list-unstyled">
+                            <li>React</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul class="list-unstyled">
+                            <li>Java (Spring Boot)</li>
+                            <li>Kotlin</li>
+                            <li>REST APIs</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Automation</h3>
+                        <ul class="list-unstyled">
+                            <li>Cucumber</li>
+                            <li>Selenium</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul class="list-unstyled">
+                            <li>SQL</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Cloud</h3>
+                        <ul class="list-unstyled">
+                            <li>Azure</li>
+                            <li>Cloud-native applications</li>
+                            <li>Render</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>DevOps & CI/CD</h3>
+                        <ul class="list-unstyled">
+                            <li>Azure CLI</li>
+                            <li>GitHub Actions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <ul class="list-unstyled">
+                            <li>Docker</li>
+                            <li>Tomcat</li>
+                            <li>JIRA</li>
+                            <li>SonarQube</li>
+                            <li>Swagger</li>
+                            <li>Git</li>
+                            <li>Bash</li>
+                            <li>VisualVM</li>
+                            <li>Rally</li>
+                            <li>Postman</li>
+                            <li>Insomnia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">Experience</h2>
+            <div class="experience-item">
+                <h3>Software Engineer</h3>
+                <h4>Infogain India Pvt. Ltd.</h4>
+                <p class="text-muted">Projects:</p>
+                <ul>
+                    <li>Serko GetThere (QA Automation - Selenium, Cucumber)</li>
+                    <li>FedEx Sustainability Insight & FDX (Java Backend Development, Microservices, REST APIs, Database Optimization)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-5">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h3>MATCHMaticAI</h3>
+                        <p>Ollama AI-powered Resume Scanner & Chatbot</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h3>COVID-19 Tracker</h3>
+                        <p>Real-Time Global Case Monitoring with Spring Boot</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h3>BRICKStorm</h3>
+                        <p>2D Brick Breaker Game in Java</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">Education</h2>
+            <div class="education-item">
+                <h3>MCA</h3>
+                <h4>G H Raisoni Institute of Information Technology, Nagpur</h4>
+                <p class="text-muted">2022</p>
+            </div>
+            <div class="education-item">
+                <h3>BCA</h3>
+                <h4>St. Francis De Sales College, Nagpur</h4>
+                <p class="text-muted">2019</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-5">Certifications & Achievements</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Java (HackerRank)</li>
+                        <li>React (Meta)</li>
+                        <li>Generative AI (Deeplearning.ai)</li>
+                        <li>Digital Marketing (Google)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>Spot Award (Infogain - FedEx Project)</li>
+                        <li>Code Gladiators Semi-Finalist</li>
+                        <li>HackerRank Gold Badge (Python)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">Contact</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope me-2"></i> official.yaseen.sheikh@gmail.com</p>
+                        <p><i class="fas fa-phone me-2"></i> 7875869377</p>
+                        <div class="social-links mt-4">
+                            <a href="https://www.linkedin.com/in/mohammad-yaseen-sheikh-55484915a/" target="_blank" class="me-3">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                            <a href="https://github.com/MohammadYaseenSheikh" target="_blank" class="me-3">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
 </html>
