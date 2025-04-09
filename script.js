@@ -1,3 +1,50 @@
+// Typing Effect
+document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const typingText = document.querySelector('.typing-text');
+    const typingText2 = document.querySelector('.typing-text-2');
+    const socialLinksContainer = document.querySelector('.social-links-container');
+    
+    // Text to type
+    const text1 = "Software Engineer";
+    const text2 = "Hyderabad, India";
+    
+    // Function to type text
+    function typeText(element, text, speed = 100) {
+        let i = 0;
+        element.textContent = '';
+        
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else {
+                // If this is the second text, show social links after a delay
+                if (element === typingText2) {
+                    setTimeout(() => {
+                        socialLinksContainer.classList.remove('d-none');
+                        setTimeout(() => {
+                            socialLinksContainer.classList.add('show');
+                        }, 100);
+                    }, 500);
+                }
+            }
+        }
+        
+        type();
+    }
+    
+    // Start typing animations
+    setTimeout(() => {
+        typeText(typingText, text1);
+    }, 500);
+    
+    setTimeout(() => {
+        typeText(typingText2, text2);
+    }, 2500);
+});
+
 // Intersection Observer for section animations
 const observerOptions = {
     root: null,
