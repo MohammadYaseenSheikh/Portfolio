@@ -161,6 +161,11 @@ section {
     font-size: 1.2rem;
 }
 
+.skill-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .skill-category ul li {
     margin-bottom: 0.5rem;
     position: relative;
