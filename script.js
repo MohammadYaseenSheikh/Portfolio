@@ -51,31 +51,41 @@ document.querySelectorAll('.skill-category, .project-card, .experience-item, .ed
 });
 
 // Dark mode toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const currentTheme = localStorage.getItem('theme');
 
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-} else if (currentTheme === 'light') {
-    document.body.classList.remove('dark-mode');
-} else if (prefersDarkScheme.matches) {
-    document.body.classList.add('dark-mode');
-}
-
-// Function to update CV last updated date
-function updateCVLastUpdatedDate() {
-    const cvLastUpdatedElement = document.getElementById('cv-last-updated');
-    if (cvLastUpdatedElement) {
-        // Get the current date in a readable format
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const currentDate = new Date().toLocaleDateString('en-US', options);
-        cvLastUpdatedElement.textContent = currentDate;
+// Function to set theme
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
     }
 }
+
+// Initialize theme
+if (currentTheme === 'dark') {
+    setTheme('dark');
+} else if (currentTheme === 'light') {
+    setTheme('light');
+} else if (prefersDarkScheme.matches) {
+    setTheme('dark');
+} else {
+    setTheme('light');
+}
+
+// Toggle theme on button click
+darkModeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+});
 
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    // Update CV last updated date
-    updateCVLastUpdatedDate();
-}); 
+});

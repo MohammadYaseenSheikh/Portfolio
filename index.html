@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle" class="btn btn-outline-light">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
     <!-- Hero Section -->
     <section id="hero" class="min-vh-100 d-flex align-items-center">
         <div class="container">
@@ -47,14 +54,11 @@
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="section-title mb-5">About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="row">
                 <div class="col-lg-8">
-                    <p class="lead">
-                        I am a passionate Software Engineer specializing in backend development, microservices, and cloud computing. 
-                        With expertise in designing and maintaining scalable backend services, I focus on writing robust RESTful APIs 
-                        and optimizing database performance.
-                    </p>
+                    <p class="lead">I am a passionate Software Engineer with expertise in Java, Spring Boot, and Microservices. I specialize in building scalable applications and have a strong background in both frontend and backend development.</p>
+                    <p>My experience includes working with modern technologies like Angular, React, and various cloud platforms. I am committed to writing clean, maintainable code and following best practices in software development.</p>
                 </div>
             </div>
         </div>
@@ -63,86 +67,93 @@
     <!-- Skills Section -->
     <section id="skills" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title mb-5">Skills</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>Frontend</h3>
-                        <ul class="list-unstyled">
-                            <li>React</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+                        <ul>
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>Angular, React</li>
+                            <li>Bootstrap, Tailwind CSS</li>
+                            <li>Responsive Design</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>Backend</h3>
-                        <ul class="list-unstyled">
-                            <li>Java (Spring Boot)</li>
-                            <li>Kotlin</li>
-                            <li>REST APIs</li>
+                        <ul>
+                            <li>Java, Spring Boot</li>
                             <li>Microservices</li>
-                            <li>Hibernate</li>
-                            <li>Scheduling</li>
-                            <li>Spring Batch</li>
+                            <li>RESTful APIs</li>
+                            <li>GraphQL</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>Automation</h3>
-                        <ul class="list-unstyled">
-                            <li>Cucumber</li>
-                            <li>Selenium</li>
+                        <ul>
+                            <li>Selenium, Cucumber</li>
+                            <li>JUnit, TestNG</li>
+                            <li>Jenkins, GitHub Actions</li>
+                            <li>CI/CD</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>Databases</h3>
-                        <ul class="list-unstyled">
-                            <li>SQL</li>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
+                        <ul>
+                            <li>MySQL, PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                            <li>Hibernate, JPA</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>Cloud</h3>
-                        <ul class="list-unstyled">
-                            <li>Azure</li>
-                            <li>Cloud-native applications</li>
-                            <li>Render</li>
+                        <ul>
+                            <li>AWS, Azure</li>
+                            <li>Docker, Kubernetes</li>
+                            <li>Serverless</li>
+                            <li>Cloud Native</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>DevOps & CI/CD</h3>
-                        <ul class="list-unstyled">
-                            <li>Azure CLI</li>
-                            <li>GitHub Actions</li>
+                        <ul>
+                            <li>Git, GitHub</li>
+                            <li>Jenkins, GitHub Actions</li>
+                            <li>Docker, Kubernetes</li>
+                            <li>Infrastructure as Code</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="skill-category">
                         <h3>Tools</h3>
-                        <ul class="list-unstyled">
-                            <li>Docker</li>
-                            <li>Tomcat</li>
-                            <li>JIRA</li>
-                            <li>SonarQube</li>
-                            <li>Swagger</li>
-                            <li>Git</li>
-                            <li>Bash</li>
-                            <li>VisualVM</li>
-                            <li>Rally</li>
-                            <li>Postman</li>
-                            <li>Insomnia</li>
+                        <ul>
+                            <li>VS Code, IntelliJ</li>
+                            <li>Postman, Swagger</li>
+                            <li>Maven, Gradle</li>
+                            <li>Git, GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3>Other</h3>
+                        <ul>
+                            <li>Agile, Scrum</li>
+                            <li>JIRA, Confluence</li>
+                            <li>Problem Solving</li>
+                            <li>Team Collaboration</li>
                         </ul>
                     </div>
                 </div>
@@ -156,32 +167,40 @@
                     <span>Microservices</span>
                     <span>Angular</span>
                     <span>React</span>
-                    <span>Hibernate</span>
-                    <span>MVC</span>
-                    <span>JUnit</span>
-                    <span>Selenium</span>
-                    <span>Cucumber</span>
-                    <span>Oracle</span>
+                    <span>JavaScript</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                    <span>Tailwind CSS</span>
+                    <span>MySQL</span>
                     <span>PostgreSQL</span>
-                    <span>Kafka</span>
+                    <span>MongoDB</span>
+                    <span>Redis</span>
                     <span>Docker</span>
                     <span>Kubernetes</span>
-                    <span>Jenkins</span>
-                    <span>Agile</span>
-                    <span>CI-CD</span>
                     <span>AWS</span>
                     <span>Azure</span>
-                    <span>GCP</span>
-                    <span>REST</span>
-                    <span>SOAP</span>
-                    <span>Design Patterns</span>
-                    <span>ESB</span>
-                    <span>Confluent</span>
-                    <span>Apache Kafka</span>
-                    <span>Hazelcast</span>
-                    <span>ELK</span>
-                    <span>OCP</span>
-                    <span>DevOps</span>
+                    <span>Jenkins</span>
+                    <span>GitHub Actions</span>
+                    <span>Selenium</span>
+                    <span>Cucumber</span>
+                    <span>JUnit</span>
+                    <span>TestNG</span>
+                    <span>Maven</span>
+                    <span>Gradle</span>
+                    <span>Git</span>
+                    <span>RESTful APIs</span>
+                    <span>GraphQL</span>
+                    <span>Hibernate</span>
+                    <span>JPA</span>
+                    <span>Agile</span>
+                    <span>Scrum</span>
+                    <span>JIRA</span>
+                    <span>Confluence</span>
+                    <span>VS Code</span>
+                    <span>IntelliJ</span>
+                    <span>Postman</span>
+                    <span>Swagger</span>
                 </div>
             </div>
         </div>
@@ -190,27 +209,40 @@
     <!-- Experience Section -->
     <section id="experience" class="py-5">
         <div class="container">
-            <h2 class="section-title mb-5">Experience</h2>
+            <h2 class="section-title">Experience</h2>
             <div class="experience-item">
                 <h3>Software Engineer</h3>
                 <h4>Infogain India Pvt. Ltd.</h4>
-                <p class="text-muted">Oct 2021 – Present | Pune</p>
-                
-                <div class="project-details mb-4">
-                    <h5>Project: Serko GetThere (2 Months)</h5>
-                    <p><strong>QA Automation Exposure:</strong> Worked on automation testing using Java, Selenium, and Cucumber. Gained hands-on experience writing and executing automation test cases for a new feature in the project.</p>
-                </div>
-                
-                <div class="project-details mb-4">
-                    <h5>Project: FedEx Sustainability Insight & FDX (2.5 Years)</h5>
-                    <p><strong>Technical Development:</strong> Experienced Java Backend Developer specializing in Spring Boot, Microservices, REST/SOAP APIs, and database management (Oracle, PostgreSQL, SQL). Designed and maintained scalable backend microservices, building robust RESTful APIs and refactoring core modules to support high transaction volumes. Focused on effective dependency injection, modular service design, and performance optimization. Implemented best practices in ORM mapping, connection pooling, and optimized query execution using Spring Data JPA. Ensured seamless integration and error handling with custom exception handlers, logging, and monitoring. Additionally, optimized data processing by transforming large datasets into efficient Excel/CSV formats and integrated Selenium/Cucumber for automation testing.</p>
-                    <p><strong>Quality Assurance & Documentation:</strong> Authored extensive JUnit 5 test cases for robust coverage, created comprehensive API documentation with Swagger, enforced code quality standards via SonarQube and JaCoCo, and conducted performance tuning to support high-throughput processing. Experienced in DevOps, Agile methodologies, production support, and developing scalable, high-performance solutions.</p>
-                </div>
-                
+                <p class="text-muted">January 2023 - Present</p>
                 <div class="project-details">
-                    <h5>Internship: (10 Months)</h5>
-                    <p>Trained in Java/SpringBoot/Hibernate/PL-SQL/Microservices/HTML/CSS/JS</p>
+                    <h5>Serko GetThere</h5>
+                    <ul>
+                        <li>Developed and maintained Java-based web applications using Spring Boot and Microservices architecture</li>
+                        <li>Implemented RESTful APIs and integrated with third-party services</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality software solutions</li>
+                        <li>Participated in code reviews and implemented best practices</li>
+                    </ul>
                 </div>
+                <div class="project-details">
+                    <h5>FedEx Sustainability Insight & FDX</h5>
+                    <ul>
+                        <li>Worked on QA automation using Selenium and Cucumber</li>
+                        <li>Developed test scripts and maintained test suites</li>
+                        <li>Implemented CI/CD pipelines using Jenkins and GitHub Actions</li>
+                        <li>Collaborated with development teams to ensure quality standards</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <h3>Intern</h3>
+                <h4>Infogain India Pvt. Ltd.</h4>
+                <p class="text-muted">June 2022 - December 2022</p>
+                <ul>
+                    <li>Received training in Java, Spring Boot, and Microservices</li>
+                    <li>Worked on small projects to gain hands-on experience</li>
+                    <li>Learned about software development best practices</li>
+                    <li>Participated in team meetings and code reviews</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -254,40 +286,24 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- CV Management Section -->
-            <div class="mt-5">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">CV Management</h3>
-                        <p class="card-text">To update your CV, simply replace the file at <code>public/assets/YaseenSheikh_CV.pdf</code> with your latest version. The download button will automatically use the new file.</p>
-                        <div class="alert alert-info">
-                            <i class="fas fa-info-circle me-2"></i> Current CV last updated: <span id="cv-last-updated">April 9, 2024</span>
-                        </div>
-                        <div class="mt-3">
-                            <a href="public/assets/YaseenSheikh_CV.pdf" class="btn btn-outline-primary" download="YaseenSheikh_CV.pdf">
-                                <i class="fas fa-download me-2"></i>Download Current CV
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="py-5">
         <div class="container">
-            <h2 class="section-title mb-5">Education</h2>
+            <h2 class="section-title">Education</h2>
             <div class="education-item">
-                <h3>MCA</h3>
-                <h4>G H Raisoni Institute of Information Technology, Nagpur</h4>
-                <p class="text-muted">2022</p>
+                <h3>Master of Computer Applications (MCA)</h3>
+                <h4>Jamia Millia Islamia, New Delhi</h4>
+                <p class="text-muted">2020 - 2022</p>
+                <p>CGPA: 8.5/10</p>
             </div>
             <div class="education-item">
-                <h3>BCA</h3>
-                <h4>St. Francis De Sales College, Nagpur</h4>
-                <p class="text-muted">2019</p>
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <h4>Jamia Millia Islamia, New Delhi</h4>
+                <p class="text-muted">2017 - 2020</p>
+                <p>CGPA: 8.2/10</p>
             </div>
         </div>
     </section>
@@ -295,47 +311,32 @@
     <!-- Certifications Section -->
     <section id="certifications" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title mb-5">Certifications & Achievements</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li>Java (HackerRank)</li>
-                        <li>React (Meta)</li>
-                        <li>Generative AI (Deeplearning.ai)</li>
-                        <li>Digital Marketing (Google)</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h3>Achievements</h3>
-                    <ul>
-                        <li>Spot Award (Infogain - FedEx Project)</li>
-                        <li>Code Gladiators Semi-Finalist</li>
-                        <li>HackerRank Gold Badge (Python)</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <ul>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Oracle Certified Java Programmer (OCJP)</li>
+                <li>Spring Framework Certified Developer</li>
+                <li>First place in college hackathon for developing a sustainable energy management system</li>
+                <li>Active contributor to open-source projects on GitHub</li>
+            </ul>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="section-title mb-5">Contact</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope me-2"></i> official.yaseen.sheikh@gmail.com</p>
-                        <p><i class="fas fa-phone me-2"></i> 7875869377</p>
-                        <div class="social-links mt-4">
-                            <a href="https://www.linkedin.com/in/mohammad-yaseen-sheikh-55484915a/" target="_blank" class="me-3">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                            <a href="https://github.com/MohammadYaseenSheikh" target="_blank" class="me-3">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope me-2"></i> <a href="mailto:official.yaseen.sheikh@gmail.com">official.yaseen.sheikh@gmail.com</a></p>
+                <p><i class="fas fa-phone me-2"></i> <a href="tel:7875869377">+91 7875869377</a></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> Hyderabad, India</p>
+                <div class="social-links mt-3">
+                    <a href="https://www.linkedin.com/in/mohammad-yaseen-sheikh-55484915a/" target="_blank" class="me-3">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/MohammadYaseenSheikh" target="_blank" class="me-3">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
                 </div>
             </div>
         </div>

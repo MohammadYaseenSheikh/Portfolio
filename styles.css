@@ -8,15 +8,81 @@
     --transition: all 0.3s ease;
 }
 
+/* Dark Mode Variables */
+:root[data-theme="dark"] {
+    --primary-color: #dfe6e9;
+    --secondary-color: #74b9ff;
+    --text-color: #dfe6e9;
+    --light-bg: #2d3436;
+    --dark-bg: #1e272e;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    background-color: var(--light-bg);
+    transition: var(--transition);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle button {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dark-mode-toggle button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: rotate(180deg);
+}
+
+/* Background Animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(9, 132, 227, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(9, 132, 227, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(9, 132, 227, 0.05) 0%, transparent 30%);
+    z-index: -1;
+    animation: backgroundAnimation 15s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 /* Section Styles */
 section {
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .section-title {
@@ -275,6 +341,36 @@ section {
     color: var(--secondary-color);
 }
 
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .skill-category,
+[data-theme="dark"] .experience-item,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .education-item,
+[data-theme="dark"] .contact-info,
+[data-theme="dark"] .tech-scroll-container {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .tech-scroll span {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .project-details h5 {
+    color: var(--text-color);
+}
+
 /* CV Management Section */
 .card {
     border: none;
@@ -320,5 +416,10 @@ section {
     
     .experience-item, .project-card, .education-item {
         margin-bottom: 1.5rem;
+    }
+    
+    .dark-mode-toggle {
+        top: 10px;
+        right: 10px;
     }
 } 
