@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website",
   "scripts": {
-    "build": "echo 'No build step required'"
+    "start": "echo 'Open index.html in your browser'"
   },
   "author": "Yaseen Sheikh",
   "license": "MIT"

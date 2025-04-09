@@ -12,6 +12,10 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
 - Built with HTML, CSS, and JavaScript
 - Uses Bootstrap for responsive design
 - Font Awesome icons for visual elements
+- Downloadable CV
+- Detailed experience and project sections
+- Technology scrolling bar
+- Contact information
 
 ## Sections
 
@@ -19,6 +23,7 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
    - Name and title
    - Location
    - Social links
+   - CV download button
 
 2. About Me
    - Professional summary
@@ -32,6 +37,7 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
    - Cloud
    - DevOps & CI/CD
    - Tools
+   - Technology scrolling bar
 
 4. Experience
    - Current role
@@ -41,6 +47,7 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
    - MATCHMaticAI
    - COVID-19 Tracker
    - BRICKStorm
+   - CV Management
 
 6. Education
    - MCA
@@ -66,6 +73,7 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
 - CSS Variables
 - CSS Grid and Flexbox
 - CSS Animations and Transitions
+- GitHub Pages
 
 ## Setup and Deployment
 
@@ -106,3 +114,28 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email: official.yaseen.sheikh@gmail.com
 - LinkedIn: [Mohammad Yaseen Sheikh](https://www.linkedin.com/in/mohammad-yaseen-sheikh-55484915a/)
 - GitHub: [MohammadYaseenSheikh](https://github.com/MohammadYaseenSheikh)
+
+## CV Management
+
+To update your CV:
+
+1. Replace the file at `public/assets/YaseenSheikh_CV.pdf` with your latest CV
+2. The download button in the hero section will automatically use the new file
+3. The CV last updated date will be automatically updated
+
+## Local Development
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm start
+   ```
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Deployment
+
+This portfolio is deployed using GitHub Pages. The deployment is automated using GitHub Actions.

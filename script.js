@@ -62,7 +62,20 @@ if (currentTheme === 'dark') {
     document.body.classList.add('dark-mode');
 }
 
+// Function to update CV last updated date
+function updateCVLastUpdatedDate() {
+    const cvLastUpdatedElement = document.getElementById('cv-last-updated');
+    if (cvLastUpdatedElement) {
+        // Get the current date in a readable format
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const currentDate = new Date().toLocaleDateString('en-US', options);
+        cvLastUpdatedElement.textContent = currentDate;
+    }
+}
+
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    // Update CV last updated date
+    updateCVLastUpdatedDate();
 }); 
