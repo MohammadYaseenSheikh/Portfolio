@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
+  "author": "Yaseen Sheikh",
+  "license": "MIT"
+} 
