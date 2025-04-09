@@ -492,4 +492,53 @@ section {
     .experience-item, .project-card, .education-item {
         margin-bottom: 1.5rem;
     }
+}
+
+/* Download Button Animation */
+.btn-primary {
+    background: var(--secondary-color);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 0 15px rgba(0, 184, 148, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 184, 148, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary i {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover i {
+    transform: translateY(-2px);
 } 
