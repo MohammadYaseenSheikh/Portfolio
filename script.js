@@ -50,41 +50,6 @@ document.querySelectorAll('.skill-category, .project-card, .experience-item, .ed
     animateOnScroll.observe(element);
 });
 
-// Dark mode toggle
-const darkModeToggle = document.getElementById('darkModeToggle');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-const currentTheme = localStorage.getItem('theme');
-
-// Function to set theme
-function setTheme(theme) {
-    if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-// Initialize theme
-if (currentTheme === 'dark') {
-    setTheme('dark');
-} else if (currentTheme === 'light') {
-    setTheme('light');
-} else if (prefersDarkScheme.matches) {
-    setTheme('dark');
-} else {
-    setTheme('light');
-}
-
-// Toggle theme on button click
-darkModeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-});
-
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');

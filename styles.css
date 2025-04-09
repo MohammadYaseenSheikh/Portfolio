@@ -1,88 +1,23 @@
 /* Global Styles */
 :root {
-    --primary-color: #2d3436;
-    --secondary-color: #0984e3;
-    --text-color: #2d3436;
-    --light-bg: #f5f6fa;
-    --dark-bg: #2d3436;
-    --card-bg: #ffffff;
-    --transition: all 0.3s ease;
-}
-
-/* Dark Mode Variables */
-:root[data-theme="dark"] {
-    --primary-color: #dfe6e9;
-    --secondary-color: #74b9ff;
+    --primary-color: #00b894;
+    --secondary-color: #00cec9;
     --text-color: #dfe6e9;
-    --light-bg: #2d3436;
-    --dark-bg: #1e272e;
-    --card-bg: #2d3436;
+    --bg-color: #2d3436;
+    --card-bg: #353b48;
+    --accent-color: #6c5ce7;
+    --transition: all 0.3s ease;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--light-bg);
+    background-color: var(--bg-color);
     transition: var(--transition);
-    padding-top: 76px; /* Add padding for fixed navbar */
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: var(--card-bg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.navbar-brand {
-    font-weight: 700;
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-}
-
-.nav-link {
-    color: var(--text-color);
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: var(--transition);
-}
-
-.nav-link:hover {
-    color: var(--secondary-color);
-}
-
-[data-theme="dark"] .navbar {
-    background-color: var(--dark-bg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.dark-mode-toggle button {
-    background-color: var(--card-bg);
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.dark-mode-toggle button:hover {
-    background-color: var(--secondary-color);
-    color: var(--card-bg);
-    transform: rotate(180deg);
+    padding-top: 76px;
+    position: relative;
+    overflow-x: hidden;
 }
 
 /* Background Animation */
@@ -94,9 +29,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 10% 20%, rgba(9, 132, 227, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(9, 132, 227, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 50% 50%, rgba(9, 132, 227, 0.05) 0%, transparent 30%);
+        radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 184, 148, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(0, 206, 201, 0.1) 0%, transparent 30%);
     z-index: -1;
     animation: backgroundAnimation 15s ease-in-out infinite alternate;
 }
@@ -108,6 +43,31 @@ body::before {
     100% {
         background-position: 100% 100%;
     }
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(53, 59, 72, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
 }
 
 /* Section Styles */
@@ -122,6 +82,7 @@ section {
     margin-bottom: 3rem;
     padding-bottom: 1rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
 
 .section-title::after {
@@ -136,8 +97,8 @@ section {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
+    background: linear-gradient(135deg, var(--bg-color), var(--card-bg));
+    color: var(--text-color);
     position: relative;
     overflow: hidden;
 }
@@ -154,8 +115,8 @@ section {
 }
 
 #hero .btn-primary {
-    background-color: white;
-    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     border: none;
     padding: 0.5rem 1.5rem;
     font-weight: 600;
@@ -163,18 +124,18 @@ section {
 }
 
 #hero .btn-primary:hover {
-    background-color: var(--light-bg);
+    background-color: var(--secondary-color);
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 .social-links a {
-    color: white;
+    color: var(--text-color);
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
@@ -183,17 +144,19 @@ section {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
 }
 
 .skill-category h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -253,18 +216,20 @@ section {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .experience-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
 }
 
 .experience-item h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -274,7 +239,7 @@ section {
 }
 
 .project-details {
-    border-left: 3px solid var(--secondary-color);
+    border-left: 3px solid var(--primary-color);
     padding-left: 1rem;
     margin-top: 1rem;
 }
@@ -289,28 +254,36 @@ section {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
 }
 
 .project-card h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
 .project-links a {
-    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
     transition: var(--transition);
 }
 
 .project-links a:hover {
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 /* Education Section */
@@ -318,18 +291,20 @@ section {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .education-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-color);
 }
 
 .education-item h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -343,8 +318,9 @@ section {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #certifications ul li {
@@ -355,7 +331,7 @@ section {
 
 #certifications ul li::before {
     content: '✓';
-    color: var(--secondary-color);
+    color: var(--primary-color);
     position: absolute;
     left: 0;
 }
@@ -365,7 +341,8 @@ section {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-info p {
@@ -373,7 +350,7 @@ section {
 }
 
 .contact-info i {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .contact-info a {
@@ -383,58 +360,7 @@ section {
 }
 
 .contact-info a:hover {
-    color: var(--secondary-color);
-}
-
-/* Dark Mode Styles */
-[data-theme="dark"] .skill-category,
-[data-theme="dark"] .experience-item,
-[data-theme="dark"] .project-card,
-[data-theme="dark"] .education-item,
-[data-theme="dark"] .contact-info,
-[data-theme="dark"] .tech-scroll-container {
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-}
-
-[data-theme="dark"] .tech-scroll span {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-[data-theme="dark"] .project-details h5 {
-    color: var(--text-color);
-}
-
-/* CV Management Section */
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-title {
-    color: var(--secondary-color);
-    font-weight: 600;
-}
-
-.card-text code {
-    background-color: var(--light-bg);
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-.alert-info {
-    background-color: rgba(9, 132, 227, 0.1);
-    border: none;
-    color: var(--secondary-color);
-    border-radius: 8px;
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
@@ -451,10 +377,5 @@ section {
     
     .experience-item, .project-card, .education-item {
         margin-bottom: 1.5rem;
-    }
-    
-    .dark-mode-toggle {
-        top: 10px;
-        right: 10px;
     }
 } 
