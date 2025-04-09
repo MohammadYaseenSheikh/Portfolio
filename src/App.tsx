@@ -7,7 +7,6 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import Blog from './components/Blog';
 import ThemeToggle from './components/ThemeToggle';
 
 function App() {
@@ -66,7 +65,6 @@ function App() {
                 <Contact />
               </motion.div>
             } />
-            <Route path="/blog" element={<Blog />} />
           </Routes>
         </AnimatePresence>
       </div>

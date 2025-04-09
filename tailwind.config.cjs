@@ -11,6 +11,9 @@ module.exports = {
         primary: '#0891b2', // Cyan-600
         secondary: '#475569', // Slate-600
         accent: '#f97316', // Orange-500
+        dark: '#0a0a0a',
+        'dark-lighter': '#1a1a1a',
+        'dark-lightest': '#2a2a2a',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
