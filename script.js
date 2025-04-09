@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         typingLocation.textContent = '';
         
         const texts = {
-            name: 'Mohammad Yaseen Sheikh',
+            name: 'Yaseen Sheikh',
             role: 'Software Engineer',
             location: 'Hyderabad, India'
         };
